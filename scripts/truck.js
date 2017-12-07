@@ -1,4 +1,4 @@
-(function() {
+(function(window) {
     'use strict';
     var App = window.App || {};
 
@@ -28,4 +28,4 @@
 
     App.Truck = Truck;
     window.App = App;
-})();
+})(window);

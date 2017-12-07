@@ -31,6 +31,14 @@
         });
     };
 
+    FormHandler.prototype.addInputHandler = function(fn) {
+      console.log('Setting input handler for form');
+      this.$formElement.on('input', '[name="emailAddress"]', function(event){
+          var emailAddress = event.target.value;
+          console.log(fn(emailAddress));
+      });
+    };
+
     FormHandler.prototype.addRangeHandler = function (rangeSelector) {
         console.log('Setting range input handler for form');
         var $rangeInput = this.$formElement.find(rangeSelector);
